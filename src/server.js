@@ -8,13 +8,12 @@ mongoose.connect("mongodb://localhost/db-tarea-prueba").
 
 const crearUsuario = function(entradaId, usuario) {
      return db.Usuarios.create(usuario).then(docUsuario => {
-
-     return db.Entradas.findByIdAndUpdate(
-          entradaId,
-     { $push: { FK_usuario: docUsuario._id } },
-     { new: true, useFindAndModify: false }
-     );
-});
+          return db.Entradas.findByIdAndUpdate(
+               entradaId,
+               { $push: { FK_usuario: docUsuario._id } },
+               { new: true, useFindAndModify: false }
+          );
+     });
 };
 
 const getEntradaWithPopulate = function(id) {
