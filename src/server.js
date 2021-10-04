@@ -35,17 +35,9 @@ const run = async function() {
           Email: "jalfaroca@est.utn.ac.cr",
           Estado: 1,
      });
-   
-     entrada = await crearUsuario(entrada._id, {
-          Nombre: "Juan Rafael",
-          Apellidos: "Mora Porras" ,
-          Fec_nacimiento: Date.parse("Feb 08, 1814"),
-          Email: "juanra@gmail.com",
-          Estado: 1,
-     });
 
      entrada = await getEntradaWithPopulate(entrada._id);
-     console.log("\n>> Populated Entrada:\n", entrada);
+     console.log("\n>> Impresion de 'Entrada' :\n", entrada);
    };
 
 run(); 
