@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 const db = require("./models");
 
-mongoose.connect("mongodb://localhost/db-tarea-prueba").
+mongoose.connect("mongodb://localhost/db-tarea-numero2").
      then(() => console.log('Conexion a la base de datos exitosa'))
-    .catch(err => console.log('Salto ERROR en la conexion', err));
+    .catch(err => console.log('ERROR en la conexion a la base de datos', err));
 
 
 const crearUsuario = function(entradaId, usuario) {
@@ -37,10 +37,10 @@ const run = async function() {
      });
    
      entrada = await crearUsuario(entrada._id, {
-          Nombre: "Juan ",
-          Apellidos: "Santamaria" ,
-          Fec_nacimiento: Date.parse("Aug 20, 1895"),
-          Email: "santamaria@est.utn.ac.cr",
+          Nombre: "Juan Rafael",
+          Apellidos: "Mora Porras" ,
+          Fec_nacimiento: Date.parse("Feb 08, 1814"),
+          Email: "juanra@gmail.com",
           Estado: 1,
      });
 
